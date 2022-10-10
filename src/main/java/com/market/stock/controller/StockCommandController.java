@@ -1,6 +1,7 @@
 package com.market.stock.controller;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +23,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  */
 @RestController
 @RequestMapping(value = "/api/v1.0/market/stock/")
+@CrossOrigin(origins = "http://localhost:4200/")
 @Tag(name = "Stock Commands", description = "This is a controller for command operations on Stock Resource")
 public class StockCommandController {
 

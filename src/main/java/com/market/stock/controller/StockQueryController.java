@@ -5,6 +5,7 @@ import java.sql.Date;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  */
 @RestController
 @RequestMapping(value = "/api/v1.0/market/stock/")
+@CrossOrigin(origins = "http://localhost:4200/")
 @Tag(name = "Stock Query", description = "This is a controller for query operations on Stock Resource")
 public class StockQueryController {
 
